@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This webpage is for presenting report text">
+    <meta name="keywords" content="dds, dds-lab, nitk-dds">
+    <meta name="author" content="Group-23">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ======  -->
+    <link rel="stylesheet" href="./output/tailwind.css">
+
+    <!-- ===== Title ===== -->
+    <title>Report - Group 23</title>
+</head>
+
+<body>
+
+    <!-- ===== Heading ===== -->
+  <!---- <div class="h-16  shadow-lg flex items-center justify-center relative ">
+        <h1 class="text-center font-semibold font-lora text-lg uppercase " style="font-size: 40px">PROJECT REPORT
+        </h1>
+    </div>  -->
+
+    <!--  -->
+    <div class="relative w-full" style="height: calc(100vh - 4rem)">    
+        <div class="h-4/5 w-2/12 left-4 bg-white  flex flex-col justify-center items-center space-y-5 uppercase font-lora absolute shadow-lg rounded-xl"
+            style="height: 63%; top: 35%; transform: translateY(-50%);background-image: url(img/background.png); background-repeat: no-repeat;  background-size:cover;">
+           <button class="block rounded-md  w-4/5 pl-2 hover:bg-blue-400 " style="height:8%;font-size: 20px;width:50%;"  onclick="openCity(event, 'Home')" id="defaultOpen"><b>Home</b></button>
+            <button class="block rounded-md  w-4/5 pl-2 hover:bg-blue-400 "style="height:8%;font-size: 20px;width: 50%;"  onclick="openCity(event, 'Aim')"><b>Aim</b></button>
+            <button class="block rounded-md  w-4/5 pl-2 hover:bg-blue-400 " style="height:8%;font-size: 20px;width:50%;" onclick="openCity(event, 'Theory')"><b>Theory</b></button>
+            <button class="block rounded-md  w-4/5 pl-2 hover:bg-blue-400 " style="height:8%;font-size: 20px;width:50%;" onclick="openCity(event, 'Pretest')"><b>Pretest</b></button>
+            <button class="block rounded-md  w-4/5 pl-2 hover:bg-blue-400 " style="height:8%;font-size: 20px;width:50%;" onclick="openCity(event, 'Procedure')"><b>Procedure</b></button>
+            <button class="block rounded-md  w-4/5 pl-2 hover:bg-blue-400 "style="height:8%;font-size: 20px;width:50%;"  onclick="openCity(event, 'Simulation')" href="./simulator.html"><b>Simulation</b></button>
+            <button class="block rounded-md  w-4/5 pl-2 hover:bg-blue-400 " style="height:8%;font-size: 20px;width:50%;" onclick="openCity(event, 'Posttest')"><b>Posttest</b></button>
+            <button class="block rounded-md  w-4/5 pl-2 hover:bg-blue-400 " style="height:8%;font-size: 20px;width:50%;" onclick="openCity(event, 'References')"><b>References</b></button>
+    </div>
+
+        <div class="bg-white py-5 pl-10  font-lora rounded-xl shadow-xl absolute right-4"
+            style="height: 120%; width: 80%; top: 60%; transform: translateY(-50%)">
+            <div class="h-full overflow-y-scroll">
+              
+              <section class="tabcontent" id="Home">
+                  <br>
+                  <h1 style="font-weight: bold;font-size: 30px;">TITLE : Detection of both SA0 and SA1 faults in SR latch implemented with NOR gates.</h1>
+                  <br><br>
+                     <img src="img/SR-Latch.jpg" width="55%">
+                </section>
+                <section class="tabcontent" id="Aim">
+                    <h1 style="font-weight: bold; font-size: 40px; " ><center>AIM </center></h1>
+                  <br>
+
+                    <h1 style="font-size: 22px"><li>Detection of SA0 and SA1 faults in SR latch</li></h1>
+                       <br>
+                    <h1 style="font-size: 22px"><li>Understanding how a SR latch works in different conditions</li></h1>
+                       <br>
+                    <h1 style="font-size: 22px"><li>Effect of SA0 and SA1 faults at different positions in a SR latch</li></h1>
+                </section>
+                
+                <section class="tabcontent" id="Theory">
+                  <h1 style="font-weight: bold; font-size: 40px; " ><center>THEORY </center></h1>
+                    <br>
+                    <p>In digital electronics, a Latch is one kind of a logic circuit, and it is also known as a bistable-multivibrator. Because it has two stable states namely active high as well as active low. It works like a storage device by holding the data through a feedback lane. It stores 1-bit of data as long as the apparatus is activated. Once enable is declared then instantly latch can change the stored data. It constantly trials the inputs once enable signal is activated. The working of these circuits can be done in 2-states based on the enable signal being high or else low. When the latch circuit is the in an active high state, then both the i/ps are low. Similarly, when the latch circuit is then an active low state, then both the i/ps are high.</p>
+                    <br>
+                    <h2 style="font-weight: bold;font-size: 24px;">Different Types of Latches : </h2>
+                    <br>
+                    <p> The latches can be classified into different types which include SR Latch, Gated S-R Latch, D latch, Gated D Latch, JK Latch, and T Latch.</p>
+                    <br>
+                    <h2 style="font-weight: bold;font-size: 24px;"> SR Latch</h2>
+                    <br>
+                    <p> An SR (Set/Reset) latch is an asynchronous apparatus, and it works separately for control signals by depending on the S-state & R-inputs. The SR-latch using 2-NOR gates with a cross loop connection is exhibited below. These latches can be built with NAND gates also; however, the two inputs are exchanged as well as cancelled. So it is called as SR’-latch.</p>
+                    <br>
+                    <img src="img/SR latch 2.png" width = "70%"><br>
+                    <img src="img/characteristic image.jpg" width = "70%"><br>
+                    <h2 style="font-weight: bold;">Working of SR Latch : </h2>
+                    <br>
+                    <p>While the R and S inputs are both low, feedback maintains the Q and Q outputs in a constant state, with Q the complement of Q. If S (Set) is pulsed high while R (Reset) is held low, then the Q output is forced high, and stays high when S returns to low; similarly, if R is pulsed high while S is held low, then the Q output is forced low, and stays low when R returns to low.</p>
+                    <p>The R = S = 1 combination is called a restricted combination or a forbidden state because, as both NOR gates then output zeros, it breaks the logical equation Q = Q.</p>
+                    <p>The combination is also inappropriate in circuits where both inputs may go low simultaneously (i.e. a transition from restricted to keep). The output would lock at either 1 or 0 depending on the propagation time relations between the gates (a race condition).</p>
+                    <img src="img/Time graph.gif" width="50%">
+                    <br><br>
+                    <h2 style="font-weight: bold;font-size: 24px;">Advantages of Latches</h2>
+                    <p>
+                      <br>1.The designing of latches is very flexible when we compare with FFs (flip-flops)
+                      <br>2.The latches utilize less power.
+                      <br>3.The performance of latch in the design of the high-speed circuit is quick because these are asynchronous within the design and there is no need of CLK signal.
+                      <br>4.The shape of the latch is very small and occupies less area
+                      <br>5.If the operation of latch based circuit is not finished in a set time, they borrow the necessary time from other to complete the operation
+                      <br>6.Latches give aggressive clocking when contrasted with flip-flop circuits.
+                      </p>
+                    <br><h2 style="font-weight: bold;font-size: 24px;">Disadvantages of Latches</h2>
+                    <p>
+                      <br>1. There will be a chance of affecting the race condition, so these are less expected.
+                      <br>2. When a latch is level sensitive, then there is a chance of meta-stability.
+                      <br>3.Analyzing the circuit is difficult due to the property of level sensitive.
+                      <br>4.The circuit can be tested by using an extra CAD program
+                    </p>
+                    <br><h2 style="font-weight: bold;font-size: 24px;">Applications of Latches </h2>
+                    <p>
+                      <br>1.Generally, latches are used to keep the conditions of the bits to encode binary numbers
+                      <br>2. Latches are single bit storage elements which are widely used in computing as well as data storage.
+                      <br>3.Latches are used in the circuits like power gating & clock as a storage device.   
+                      <br>4.Data latches are used in synchronous two-phase systems for reducing the transit count.
+                      <br>5.SR latch is used for keypad button like in our old mobile phones, when we press the button, then that particular button sorted with ground else all button are at there max voltage, then system sends the information that a button is pressed and works accordingly.
+                    </p>
+                    <br>
+                    <h3>To create one for ourselves, we can cross-couple two NOR gates. In other words, we connect them in a way such that the output of one feeds into the input of the other and vice versa.</h3>
+                    <p><img src="img/srlatchfault.jpeg" width=50%><br>
+                          <h2 style="font-weight: bold;">Stuck at faults :</h2>
+                    <li> Stuck at faults occur when a line is permanently stuck to Vdd or ground giving a faulty output. This line may be an input or output to any gate. Also this fault can be single or multiple stuck at faults.</li><br>
+                    <li>When a signal, or gate output, is stuck at a 0 or 1 value, independent of the inputs to the circuit, the signal is said to be “stuck at” and the fault model used to describe this type error is called a “stuck at fault model”.</li><br>
+                    <li>The stuck-at fault model is a logical fault model because no delay information is associated with the fault definition.</li><br>
+                    <li>A pattern set with 100% stuck-at fault coverage consists of tests to detect every possible stuck-at fault in a circuit. 100% stuck-at fault coverage does not necessarily guarantee high quality, since faults of many other kinds—such as bridging faults, opens faults, and transition or delay faults—often occur.</li>
+                    <br>
+                     Now let us consider the case when S is Stuck-at-0 then no matter what input we enter it considers S as 0 i.e S=0. so from gate 2 logic relation between Q and Q' is satisfied.so when R becomes 1 eventually Q becomes Zero and when R becomes 0 then since SR = (0,0) is a memory state whatever the output present at previous state that is passed again.
+                    <br><br>
+                     <h1><b>Fig 1: S stuck at 0 (S=0)</b></h1>
+                     <img src="img/img1.jpg" width=70%><br>
+                    <br>if we consider the case S Stuck-at-1 then no matter what input we enter it considers S as 1 i.e S=1. so from gate 2 we can say that Q' becomes i.e Q'= 0 fo whole time which makes Q=1. but when R=1 then since SR = (11) is an illegal condition it becomes both Q and Q' 0 which is logically incorrect. other than that when R=0 then Q becomes 1 and Q' becomes 0.
+                    <br><br>
+                    <h1><b>Fig 2: S stuck at 1 (S=1)</b></h1>
+                    <img src="img/img2.jpg" width=70%><br>
+                    <br>if we consider the case R Stuck-at-0 then no matter what input we enter it considers R as 0 i.e R=0. so from gate 1 logic relation between Q and Q' is satisfied.so when S=1 then it makes Q = 1 and Q' = 0. and when S=0 then SR = (00) is a memory condition so what ever the previous output is it will be carried again.
+                     <br>
+                    <br><h1><b>Fig 3: R stuck at 0 (R=0)</b></h1>
+                    <img src="img/img3.jpg" width=70%><br>
+                    <br>if we consider the case R stuck-at-1 then no matter what input we enter it considers R as 1 i.e R=1. so from gate 1 we can say that Q becomes i.e Q = 0 fo whole time which makes Q'=1. but when S becomes 1 then since SR = (11) is an illegal consition it may change the value of Q'. other than that when S=0 then Q becomes 0 and Q' becomes 1.
+                    <br><br><h1><b>Fig 4: R stuck at 1 (R=1)</b></h1>
+                    <img src="img/img4.jpg" width=70%><br>
+                    <br>if we consider A/Q' Stuck-at-1 then it makes Q'=1 and it logically represents Q=0. so nomatter what the input values of S and R are Q remains at 0 and Q' remains at 1 i.e QQ'=(01).
+                    <br><br><h1><b>Fig 5: A/Q' stuck at 1 (Q'=1)</b></h1>
+                    <img src="img/img5.jpg" width=70%><br>
+                    <br>if we consider A/Q' stuck-at-0 then it makes Q'=0. and from gate 1 we can say that Q = R'. so when R is 0 then Q becomes 1 and when R is 1 then Q becomes 0.
+                    <br><br><h1><b>Fig 6: A/Q' stuck at 0 (Q'=0)</b></h1>
+                    <img src="img/img6.jpg" width=70%><br>
+                    </p>
+                </section>
+                <section class="tabcontent" id = "Pretest">
+                 
+                  <div id="quiz">
+                    <h1 style="font-weight: bold; font-size: 30px;"><center>PRETEST </center></h1>
+                    <br>
+                    <div class="question"><b>1.Full Form of SR Latch</b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question0" value="a">
+                        a : System Reset Latch
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question0" value="b">
+                        b : Sync Rated Latch
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question0" value="c">
+                        c : Set Reset Latch
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question0" value="d">
+                        d : Stable Remote Latch
+                      </label>
+                      <br><br>
+                    </div>
+                    <div class="question"><b>2.Why Latches are used for ?</b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question1" value="a">
+                        a : To process data fast
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question1" value="b">
+                        b : To store a bit of data
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question1" value="c">
+                        c : To flush the buffer after execution of a program
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question1" value="d">
+                        d : To retreive deleted data back
+                      </label>
+                      <br><br>
+                    </div>
+                    <div class="question"><b>3.Which gates are used for SR Latch implementation in general ?</b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question2" value="a">
+                        a : AND, OR
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question2" value="b">
+                        b : NOR, NAND
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question2" value="c">
+                        c : XOR, XNOR
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question2" value="d">
+                        d : Both a and c
+                      </label>
+                      <br><br>
+                    </div>
+                    <div class="question"><b>4.Which is/are commonly used to interface output devices ?</b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question3" value="a">
+                        a : Buffer
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question3" value="b">
+                        b : Pulse Generator
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question3" value="c">
+                        c : Latch
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question3" value="d">
+                        d : Both a and b
+                      </label>
+                      <br><br>
+                    </div>
+                    <div class="question"><b>5.Stuck at faults in general are caused :</b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question4" value="a">
+                        a : When a line is permanently stuck by holding a point with hand
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question4" value="b">
+                        b : When a line temporarily stuck due to overflow of data 
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question4" value="c">
+                        c : When a line is permanently stuck due to overflow of data with no further transmission for a while
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question4" value="d">
+                        d : When a line is permanently stuck to Vdd or grounded
+                      </label>
+                      <br>
+                    </div>
+                  </div>
+                  <br>
+                  <button id="submit" class="py-1 px-4 rounded-md text-gray-800 font-semibold bg-blue-400 hover:bg-yellow-300">Submit Test</button>
+                  <div id="results"></div>
+                  
+                </section>
+                <script>
+              const myQuestions = [{"question":"Full Form of SR Latch","answers":{"a":"System Reset Latch","b":"Sync Rated Latch","c":"Set Reset Latch","d":"option4"},"correctAnswer":"c"},{"question":"Why Latches are used for ?","answers":{"a":"option1","b":"option2","c":"option3","d":"option4"},"correctAnswer":"b"},{"question":"Which gates are used for SR Latch implementation in general ? ","answers":{"a":"option1","b":"option2","c":"option3","d":"option4"},"correctAnswer":"b"},{"question":"Stuck at faults in general are represented as :","answers":{"a":"option1","b":"option2","c":"option3","d":"option4"},"correctAnswer":"c"},{"question":"Stuck at faults in general are caused :","answers":{"a":"option1","b":"option2","c":"option3","d":"option4"},"correctAnswer":"d"}];
+                </script>
+                <script>
+                           const quizContainer = document.getElementById("quiz");
+                          const resultsContainer = document.getElementById("results");
+                          const submitButton = document.getElementById("submit");
+
+
+                          function showResults() {
+                            // gather answer containers from our quiz
+                            const answerContainers = quizContainer.querySelectorAll(".answers");
+                            answerContainers.forEach(e => e.style.color = "black");
+
+                            // keep track of user's answers
+                            let numCorrect = 0;
+
+                            // for each question...
+                            myQuestions.forEach((currentQuestion, questionNumber) => {
+                              // find selected answer
+                              const answerContainer = answerContainers[questionNumber];
+                              const selector = `input[name=question${questionNumber}]:checked`;
+                              const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                              // if answer is correct
+                              if (userAnswer === currentQuestion.correctAnswer) {
+                                // add to the number of correct answers
+                                numCorrect++;
+
+                                // color the answers green
+                                //answerContainers[questionNumber].style.color = "lightgreen";
+                              } else {
+                                // if answer is wrong or blank
+                                // color the answers red
+                                answerContainers[questionNumber].style.color = "red";
+                              }
+                            });
+
+                            // show number of correct answers out of total
+                            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+                          }
+
+
+                          submitButton.addEventListener("click", showResults);
+                </script>
+
+                <!-- ===== Reference ===== -->
+                <section class="tabcontent" id="Procedure">
+                  <h1 style="font-weight: bold; font-size: 30px;"><center>PROCEDURE</center></h1>
+                  <br>
+        
+                    <h2>Consider the SR latch given Below for our understanding</h2>
+                     <img src="img/procedure.jpg" width=40%><br>
+                    <ol type="I">
+                        <li>Enter input values for S(Set) and R(Reset)in the corresponding boxes with either 0 or 1 as inputs.</li>
+                        <li>  Now enter fault values (inside boxes colored with red with 0 or 1) for different positions (Sf, Rf,Qf, Q'f) to check for correponding faulty outputs.</li>
+                        <li> Click on the RUN button to check the results on the table.</li>
+                        <li>  Faulty outputs which differ from normal outputs are mentioned with red colour as indication of different outputs.</li>
+                        <li>.  The Table consists of Stuck at positions with their corresponding stuck at faults( 0 or 1 ), inputs, normal outputs , faulty outputs (actual output) when faults are present.</li>
+                        <li>  Now repeat the procedure from the step 1 for different values of input. </li>
+                        <li>  Use RESET button to clear the table.</li>
+                    </ol>
+                </section>
+           
+                
+             <section class="tabcontent" id = "Posttest">
+               <br>
+                 
+                  <div id="quiz2">
+                    <h1 style="font-weight: bold; font-size: 30px;"><center>POSTTEST</center></h1>
+                    <br>
+                    <div class="question"><b>1.Which state/es of inputs in invalid when SR Latch is implemented with NOR gates ?</b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question0" value="a">
+                        a : S=0, R=1
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question0" value="b">
+                        b : S=1, R=0
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question0" value="c">
+                        c : S=0, R=0
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question0" value="d">
+                        d : S=1, R=1
+                      </label>
+                      <br><br>
+                    </div>
+                    <div class="question"><b>2.Which output is given when S is stuck at 1 and Inputs given S=0, R=0 when NOR gates are used ? </b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question1" value="a">
+                        a : Q=1
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question1" value="b">
+                        b : Q=0
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question1" value="c">
+                        c : Invalid Input
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question1" value="d">
+                        d : Both a and b
+                      </label>
+                      <br><br>
+                    </div>
+                    <div class="question"><b>3.Which input preserves or store previous state's output ?</b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question2" value="a">
+                        a : S=1, R=0
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question2" value="b">
+                        b : S=0, R=0
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question2" value="c">
+                        c : S=1, R=1
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question2" value="d">
+                        d : Both a and c
+                      </label>
+                      <br><br>
+                    </div>
+                    <div class="question"><b>4.Which properties are not considered in Latches ?</b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question3" value="a">
+                        a : Output of the Latches change as we change the input 
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question3" value="b">
+                        b :Latches are level triggered
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question3" value="c">
+                        c : Latches are fast
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question3" value="d">
+                        d : Latches are edge triggered
+                      </label>
+                      <br><br>
+                    </div>
+                    <div class="question"><b>5.Two stable states of latches are :</b></div>
+                    <div class="answers">
+                      <label>
+                        <input type="radio" name="question4" value="a">
+                        a : Astable and Monostable
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question4" value="b">
+                        b : Low input  and High output
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question4" value="c">
+                        c : High output and Low output
+                      </label>
+                      <br>
+                      <label>
+                        <input type="radio" name="question4" value="d">
+                        d : Low output and High input
+                      </label>
+                      <br>
+                    </div>
+                  </div>
+                  <br>
+                  <button id="submit2" class="py-1 px-4 rounded-md text-gray-800 font-semibold bg-blue-400 hover:bg-yellow-300">Submit Test</button>
+                  <div id="results2"></div>
+                  
+                </section>
+                <script>
+              const myQuestions2 = [{"question":"Question 1 ___","answers":{"a":"option1","b":"option2","c":"option3","d":"option4"},"correctAnswer":"d"},{"question":"Question 2 ___","answers":{"a":"option1","b":"option2","c":"option3","d":"option4"},"correctAnswer":"a"},{"question":"Question 3 ___","answers":{"a":"option1","b":"option2","c":"option3","d":"option4"},"correctAnswer":"b"},{"question":"Question 4 ___","answers":{"a":"option1","b":"option2","c":"option3","d":"option4"},"correctAnswer":"d"},{"question":"Question 5 ___","answers":{"a":"option1","b":"option2","c":"option3","d":"option4"},"correctAnswer":"c"}];
+                </script>
+                <script>
+                           const quizContainer2 = document.getElementById("quiz2");
+                          const resultsContainer2 = document.getElementById("results2");
+                          const submitButton2 = document.getElementById("submit2");
+
+
+                          function showResults2() {
+                            // gather answer containers from our quiz
+                            const answerContainers2 = quizContainer2.querySelectorAll(".answers");
+                            answerContainers2.forEach(e => e.style.color = "black");
+
+                            // keep track of user's answers
+                            let numCorrect2 = 0;
+
+                            // for each question...
+                            myQuestions2.forEach((currentQuestion, questionNumber) => {
+                              // find selected answer
+                              const answerContainer2 = answerContainers2[questionNumber];
+                              const selector2 = `input[name=question${questionNumber}]:checked`;
+                              const userAnswer2 = (answerContainer2.querySelector(selector2) || {}).value;
+
+                              // if answer is correct
+                              if (userAnswer2 === currentQuestion.correctAnswer) {
+                                // add to the number of correct answers
+                                numCorrect2++;
+
+                                // color the answers green
+                                //answerContainers[questionNumber].style.color = "lightgreen";
+                              } else {
+                                // if answer is wrong or blank
+                                // color the answers red
+                                answerContainers2[questionNumber].style.color = "red";
+                              }
+                            });
+
+                            // show number of correct answers out of total
+                            resultsContainer2.innerHTML = `${numCorrect2} out of ${myQuestions2.length}`;
+                          }
+
+
+                          submitButton2.addEventListener("click", showResults2);
+                </script>
+                <section class="tabcontent" id="Simulation">
+                  <br><br><br>
+                    <body class="h-screen bg-gray-100" style="background-image: url(img/background.png); background-repeat: no-repeat;  background-size: cover;">
+
+    <!-- ===== Heading ===== -->
+    <div class="h-16 bg-white shadow-lg flex items-center justify-center relative" style="background-image: url(img/background.png); background-repeat: no-repeat;  background-size: cover;width:125%" >
+      <h1 style="font-weight: bold; font-size: 30px;"><center>SIMULATION</center></h1>
+    </div>
+
+    <!-- ===== Home ===== -->
+    <div class="relative w-full" style="height: calc(100vh - 4rem);width:125%;">
+
+        <!-- ===== Input ===== -->
+        <div class="left-4 bg-white absolute shadow-lg rounded-xl"
+            style="width:48%; height: 90%; top: 50%; transform: translateY(-50%);">
+            <div class="h-full font-lora flex flex-col items-center justify-center">
+                <img class="w-3/6" src="./img/srlatchfault.jpeg">
+                <div class="mt-5">
+                    <h2 style="font-weight: bold;">INPUTS : </h2>
+                    <input type="text" id="S" class="w-10 bg-blue-400 text-center rounded-sm " placeholder="S">
+                    <input type="text" id="R" class="w-10 bg-blue-400 text-center rounded-sm" placeholder="R">
+                </div>
+
+                <div class="text-center my-5">
+                    <h2 style="font-weight: bold;">ENTER FAULTS : </h2>
+                    <input type="text" id="Sf" class="w-10 bg-red-200 text-center rounded-sm" placeholder="Sf">
+                    <input type="text" id="Rf" class="w-10 bg-red-200 text-center rounded-sm" placeholder="Rf">
+                    <input type="text" id="Qf" class="w-10 bg-red-200 text-center rounded-sm" placeholder="Qf">
+                    <input type="text" id="Q'f" class="w-10 bg-red-200 text-center rounded-sm" placeholder="Q'f">
+                </div>
+                <button id="check-btn"
+                    class="py-1 px-4 rounded-md text-gray-800 font-semibold bg-blue-400 hover:bg-yellow-300">RUN</button>
+                    <br>
+                    <button type="reset" class="py-1 px-4 rounded-md text-gray-800 font-semibold bg-blue-400  hover:bg-yellow-300" onclick="document.location.reload()">RESET</button>
+            </div>
+        </div>
+
+        <!-- ===== Truth Table ===== -->
+        <div class="overflow-y-auto font-lora bg-white rounded-xl shadow-xl absolute right-4"
+            style="width:48%; height: 90%; top: 50%; transform: translateY(-50%)">
+
+            <div class="m-5">
+                <p class="text-center font-semibold mb-1">Truth Table</p>
+                <hr class="w-4/5 h-0.5 mx-auto bg-gray-300 mb-3">
+                <table id="section-to-print" class="w-full table border text-center">
+                    <tbody id="table-body">
+                        <tr>
+                            <th rowspan="2" class="border px-5 border-gray-400">S R</th>
+                            <th rowspan="2" class="border border-gray-400">Faults</th>
+                            <th colspan="2" class="border border-gray-400">Normal Output</th>
+                            <th colspan="2" class="border border-gray-400">Final/Faulty Output</th>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-400">Q</td>
+                            <td class="border border-gray-400">Q'</td>
+                            <td class="border border-gray-400">Q</td>
+                            <td class="border border-gray-400">Q'</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== Button and input =====
+const getS = document.getElementById("S");
+const getR = document.getElementById("R");
+const getSf = document.getElementById("Sf");
+const getRf = document.getElementById("Rf");
+const getQf = document.getElementById("Qf");
+const getQ_barf = document.getElementById("Q'f");
+
+const checkBtn = document.getElementById("check-btn");
+const tableBody = document.getElementById("table-body");
+
+let qpreval="x";
+let q_prebarval="x";
+let respreq = "x";
+let respreq_bar = "x";
+let i;
+
+// ===== Create a td tag =====
+const createTd = (value) => {
+  const td = document.createElement("td");
+  td.innerText = value;
+  td.classList.add("border");
+  td.classList.add("border-gray-400");
+  return td;
+};
+
+// ===== Creating a row =====
+const createRow = (s, r, fault, expq, expq_bar, fRes) => {
+  const tr = document.createElement("tr");
+  const td1 = createTd(`${s} ${r}`);
+  if(s==1 && r==1){
+    td1.classList.add("bg-yellow-400");
+  }
+  tr.appendChild(td1);
+  const td2 = createTd(`${fault}`);
+  tr.appendChild(td2);
+  const td3 = createTd(expq);
+  tr.appendChild(td3);
+  const td4 = createTd(expq_bar);
+  tr.appendChild(td4);
+  const td5 = createTd(fRes.q);
+
+  // ===== Wrong Mark for Q =====
+  if (expq != fRes.q) {
+    td5.classList.add("bg-red-300");
+  }
+  tr.appendChild(td5);
+  const td6 = createTd(fRes.q_bar);
+
+  // ===== Wrong Mark for Q_bar =====
+  if (expq_bar != fRes.q_bar) {
+    td6.classList.add("bg-red-300");
+  }
+  tr.appendChild(td6);
+  tableBody.appendChild(tr);
+};
+
+// ===== Validate Input =====
+const checkNum = (num) => {
+  if (!isNaN(num) && num != "" && (num == 1) | (num == 0)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+
+const getQval = (s, r) => {
+   if (s == 0 && r == 1) {
+    return 0;
+  } else if (s == 1 && r == 0) {
+    return 1;
+  } else if (s == 1 && r == 1) {
+    return 0;
+  } else if (s == 0 && r == 0){
+    return qpreval;
+  }
+};
+
+
+const getQ_barval = (s, r) => {
+  if (s == 0 && r == 1) {
+    return 1;
+  } else if (s == 1 && r == 0) {
+    return 0;
+  } else if (s == 1 && r == 1) {
+    return 0;
+  }else if (s == 0 && r == 0){
+    return q_prebarval;
+  }
+};
+
+const getnot = (r) => {
+  if(r==0){
+    return 1;
+  }else if(r==1){
+    return 0;
+  }
+};
+// ===== return 1 or 0
+const zeroOrOne = (v) => {
+  let k;
+  if (v.value == 0) {
+    k = 0;
+  } else {
+    k = 1;
+  }
+  v.value = "";
+  return k;
+};
+
+// ===== Fault =====
+const getFault = () => {
+  let fault = {};
+   i=0;
+   if(checkNum(getSf.value)){
+    fault.f = "S";
+    fault.v = zeroOrOne(getSf);
+    i=i+1;
+  }
+   if(checkNum(getRf.value)){
+    fault.f = "R";
+    fault.v = zeroOrOne(getRf);
+    i=i+1;
+  }
+  if(checkNum(getQf.value)){
+    fault.f = "Q";
+    fault.v = zeroOrOne(getQf);
+    i=i+1;
+  }
+  if(checkNum(getQ_barf.value)){
+    fault.f = "Q'";
+    fault.v = zeroOrOne(getQ_barf);
+    i=i+1;
+  }
+  return fault; 
+};
+
+// ===== Fault Res =====
+const getFaultRes = (s, r, flt) => {
+  let ts = s;
+  let tr = r;
+  let res = {};
+  if (flt.f == "S") {
+    s = flt.v;
+    if(s==1){
+      res.q_bar = 0;
+      res.q = getnot(r);
+      respreq = res.q;
+      respreq_bar = res.q_bar;
+    }
+    else if(s==0){
+      if(r==0){
+        res.q = respreq;
+        res.q_bar = respreq_bar;
+      }
+      else if(r==1){
+        res.q = 0;
+        res.q_bar = 1;
+        respreq = res.q;
+       respreq_bar = res.q_bar;
+      }
+    }   
+  }else if (flt.f == "R") {
+    r = flt.v;
+    if(r==1){
+      res.q = 0;
+      res.q_bar = getnot(s);
+      respreq = res.q;
+       respreq_bar = res.q_bar;
+    }else if(r==0){
+      if(s==0){
+        res.q = respreq;
+        res.q_bar = respreq_bar;
+      }else if(s==1){
+        res.q = 1;
+        res.q_bar = 0;
+        respreq = res.q;
+       respreq_bar = res.q_bar;
+      }
+    }
+  }else if (flt.f == "Q") {
+    q = flt.v;
+    res.q = flt.v;
+    respreq = res.q;
+    if(q==1){
+      res.q_bar = 0;
+      respreq_bar = res.q_bar;
+    }else{
+      res.q_bar = getnot(s);
+      respreq_bar = res.q_bar;
+    }
+  }else if (flt.f == "Q'") {
+    q_bar = flt.v;
+    res.q_bar = flt.v;
+    respreq_bar = res.q_bar;
+    if(q_bar==1){
+      res.q=0;
+      respreq = res.q;
+    }else{
+      res.q=getnot(r);
+      respreq = res.q;
+    }
+  } 
+  return res;
+};
+
+
+
+// ===== Getting Result =====
+checkBtn.addEventListener("click", () => {
+  const s = getS.value;
+  const r = getR.value;
+  
+  getS.value = "";
+  getR.value = "";
+  const sf=getSf.value;
+  const rf=getRf.value;
+  const qf=getQf.value;
+  const q_barf=getQ_barf.value;
+  if(checkNum(s)&&checkNum(r)){
+  let faults = getFault();
+  let fRes = {};
+
+  if (Object.keys(faults) == 0) {
+    faults = "N/A";
+      qval = getQval(s,r);
+      qpreval = qval;
+      q_barval = getQ_barval(s,r);
+      q_prebarval = q_barval;
+    fRes.q = qval;
+    fRes.q_bar = q_barval;
+       respreq = fRes.q;
+              respreq_bar = fRes.q_bar;
+    createRow(s, r, faults, qval, q_barval, fRes);
+  } 
+  else if(i==1){
+    qval = getQval(s,r);
+    qpreval = qval;
+    q_barval = getQ_barval(s,r);
+    q_prebarval = q_barval;
+    fRes = getFaultRes(s, r, faults);
+    faults = `${faults.f} SA${faults.v}`;
+    createRow(s, r, faults, qval, q_barval, fRes);
+  }
+  else if(i==2){
+      qval = getQval(s,r);
+      qpreval = qval;
+     q_barval = getQ_barval(s,r);
+     q_prebarval = q_barval;
+     if(checkNum(sf)&&checkNum(rf)){        
+             faults=`S SA${sf} R SA${rf}`; 
+             if(sf==1&&rf==0){
+              fRes.q = 1;
+              fRes.q_bar = 0;
+              respreq = fRes.q;
+              respreq_bar = fRes.q_bar;
+            }else if(sf==1 && rf==1){
+              fRes.q = 0;
+              fRes.q_bar = 0;
+              respreq = fRes.q;
+              respreq_bar = fRes.q_bar;
+            }else if(sf==0 && rf==1){
+              fRes.q = 0;
+              fRes.q_bar = 1;
+              respreq = fRes.q;
+              respreq_bar = fRes.q_bar;
+            }else if(sf==0 && rf==0){
+              fRes.q = respreq;
+              fRes.q_bar = respreq_bar;
+            }
+      } 
+    else if(checkNum(sf)&&checkNum(qf)){
+      faults=`S SA${sf} Q SA${qf}`; 
+      if(sf==1&&qf==0){
+       fRes.q = 0;
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(sf==1 && qf==1){
+       fRes.q = 1;
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(sf==0 && qf==1){
+       fRes.q = 1;
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(sf==0 && qf==0){
+       fRes.q = 0;
+       fRes.q_bar = 1;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }
+    }
+    else if(checkNum(rf)&&checkNum(qf)){
+      faults=`R SA${rf} Q SA${qf}`; 
+      if(rf==1&&qf==0){
+       fRes.q = 0;
+       fRes.q_bar = getnot(s);
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(rf==1 && qf==1){
+       fRes.q = 1;
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(rf==0 && qf==1){
+       fRes.q = 1;
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(rf==0 && qf==0){
+       fRes.q = 0;
+       fRes.q_bar = getnot(s);
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }
+    }
+    else if(checkNum(q_barf)&&checkNum(qf)){
+      faults=`Q SA${qf} Q' SA${q_barf}`; 
+      if(q_barf==1&&qf==0){
+       fRes.q = 0;
+       fRes.q_bar = 1;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(q_barf==1 && qf==1){
+       fRes.q = 1;
+       fRes.q_bar = 1;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(q_barf==0 && qf==1){
+       fRes.q = 1;
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(q_barf==0 && qf==0){
+       fRes.q = 0;
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }
+    }
+    else if(checkNum(q_barf)&&checkNum(sf)){
+      faults=`S SA${sf} Q' SA${q_barf}`; 
+      if(q_barf==1&&sf==0){
+       fRes.q = 0;
+       fRes.q_bar = 1;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(q_barf==1 && sf==1){
+       fRes.q = 0;
+       fRes.q_bar = 1;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(q_barf==0 && sf==1){
+       fRes.q = getnot(r);
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(q_barf==0 && sf==0){
+       fRes.q = getnot(r);
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }
+    }
+    else if(checkNum(q_barf)&&checkNum(rf)){
+      faults=`R SA${rf} Q' SA${q_barf}`; 
+      if(q_barf==1&&rf==0){
+       fRes.q = 0;
+       fRes.q_bar = 1;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(q_barf==1 && rf==1){
+       fRes.q = 0;
+       fRes.q_bar = 1;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(q_barf==0 && rf==1){
+       fRes.q = 0;
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }else if(q_barf==0 && rf==0){
+       fRes.q = 1;
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+     }
+    }
+    createRow(s,r,faults,qval,q_barval,fRes);
+  }else if(i==3){
+     qval = getQval(s,r);
+      qpreval = qval;
+     q_barval = getQ_barval(s,r);
+     q_prebarval = q_barval;
+     if(checkNum(sf)&&checkNum(rf)&&checkNum(qf)){
+       faults = `S SA${sf} R SA${rf} Q SA${qf}`;
+       if(qf==1){
+        fRes.q = 1;
+        fRes.q_bar = 0;
+        respreq = fRes.q;
+        respreq_bar = fRes.q_bar;
+       }else if(qf==0){
+        fRes.q = 0;
+        fRes.q_bar = getnot(sf);
+        respreq = fRes.q;
+        respreq_bar = fRes.q_bar;
+       }
+     }else if(checkNum(sf)&&checkNum(rf)&&checkNum(q_barf)){
+      faults = `S SA${sf} R SA${rf} Q' SA${q_barf}`;
+      if(q_barf==1){
+       fRes.q = 0;
+       fRes.q_bar = 1;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+      }else if(q_barf==0){
+       fRes.q = getnot(rf);
+       fRes.q_bar = 0;
+       respreq = fRes.q;
+       respreq_bar = fRes.q_bar;
+      }
+     }else if(checkNum(sf)&&checkNum(qf)&&checkNum(q_barf)){
+      faults = `S SA${sf} Q SA${qf} Q' SA${q_barf}`;
+      fRes.q = qf;
+      fRes.q_bar = q_barf;
+      respreq = fRes.q;
+      respreq_bar = fRes.q_bar;
+     }
+     else if(checkNum(rf)&&checkNum(qf)&&checkNum(q_barf)){
+      faults = `R SA${rf} Q SA${qf} Q' SA${q_barf}`;
+      fRes.q = qf;
+      fRes.q_bar = q_barf;
+      respreq = fRes.q;
+      respreq_bar = fRes.q_bar;
+     }
+     createRow(s,r,faults,qval,q_barval,fRes);
+  }else if(i==4){
+     qval = getQval(s,r);
+      qpreval = qval;
+     q_barval = getQ_barval(s,r);
+     q_prebarval = q_barval;
+    if(checkNum(sf)&&checkNum(rf)&&checkNum(qf)&&checkNum(q_barf)){
+      faults = `S SA${sf} R SA${rf} Q SA${qf} Q' SA${q_barf}`;
+      fRes.q = qf;
+      fRes.q_bar = q_barf;
+      respreq = fRes.q;
+      respreq_bar = fRes.q_bar;
+    }
+    createRow(s,r,faults,qval,q_barval,fRes);
+  }
+  /*getSf.value = "";
+  getRf.value = "";
+  getQf.value = "";
+  getQ_barf.value = "";*/
+  }
+});
+                      </script>               
+                </section>
+                    <section class="tabcontent" id="References">
+                  <br>
+                  <h1 style="font-weight: bold; font-size: 30px;"><center>REFERENCES</center></h1>
+                  <br>
+                        <ol type="1">
+                          
+                          <li>Ronald J. Tocci, Neal S. Widmer, Gregory L. Moss, "Digital Systems", Pearson, 10th ed. 2009</li>
+                        <br>
+                         <li>This experiment is developed by  Dr. Biswajit R. Bhowmik and his UG students :  G. Jaya Ragha Charan ,
+                         B.K Eswar Teja  ,
+                         P. Shiva Ram Charan ,
+                         P. Venkata Sathwik ,
+                         P. Abhinav Sai ,                       
+                        Department of Computer Science and Engineering, National Institute of Technology Karnataka.</li>
+                        </ol>
+
+
+                </section> 
+            </div>
+        </div>
+    </div>
+          <script>
+          function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+          
+          // Get the element with id="defaultOpen" and click on it
+          document.getElementById("defaultOpen").click();
+          </script>
+             
+          </body>
+          </html> 
